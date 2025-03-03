@@ -7,6 +7,7 @@ phases:
     commands:
       - echo "Installing dependencies..."
       - apt-get update -y
+      - apt-get install -y maven
   build:
     commands:
       - echo "Building Java project..."
@@ -17,5 +18,5 @@ phases:
       - ls -l target/
 artifacts:
   files:
-    - target/*.jar
+    - target/*.war  # Changed from *.jar to *.war
   discard-paths: yes
